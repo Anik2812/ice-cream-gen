@@ -1,0 +1,104 @@
+@keyframes wobble {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    25% { transform: translateX(-50%) rotate(-5deg); }
+    75% { transform: translateX(-50%) rotate(5deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.wobble {
+    animation: wobble 0.5s ease;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+}
+
+.ice-cream {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    margin: 0 auto 30px;
+}
+
+.cone {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 100px solid #f9c74f;
+}
+
+.scoop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ff6b6b;
+    transition: all 0.5s ease;
+}
+
+#flavor {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 27px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
